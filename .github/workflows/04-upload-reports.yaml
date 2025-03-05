@@ -34,6 +34,9 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
+      - name: Check report folders
+        run: ls playwright-report
+
       - name: Upload Test Reports  # Uploads test results as artifacts for later review.
         uses: actions/upload-artifact@v4
         with:
